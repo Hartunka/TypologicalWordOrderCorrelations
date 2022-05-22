@@ -10,7 +10,7 @@ fit.rstan <- function( save.dir, file.name, model, dat, loadExisting=TRUE,
     stanfit <- rstan::sampling(object=model, data=dat, 
                        iter=(iter+1500), warmup=1500, chain=chains, cores=chains,
                        refresh=refresh, seed=seed,
-                       save_warmup=TRUE,
+                       save_warmup=TRUE, control=list(adapt_delta=adapt_delta, max_treedepth=max_treedepth)),
                        pars=c("V"), include=FALSE)
     # save model fit
     save( stanfit, file=save.path.fit )
