@@ -1,4 +1,4 @@
-proj.dir = file.path('~/masterarbeit_code')
+proj.dir = file.path('~/TypologicalWordOrderCorrelations')
 fit.dir = file.path( proj.dir, 'fit' )
 models.dir = file.path( proj.dir, 'models' )
 dataprep.dir = file.path( proj.dir, 'dataprep')
